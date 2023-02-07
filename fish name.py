@@ -26,4 +26,4 @@ for item in fish:
 
 for item in fish:
     if "cod" in item:
-        
+        print(item)
