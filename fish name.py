@@ -8,6 +8,6 @@ print()
 for item in fish:
     print(item[0:3])
 
-largest = 
+largest = None
 for item in fish:
     if len(item)
