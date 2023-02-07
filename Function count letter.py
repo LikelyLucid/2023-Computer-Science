@@ -1,1 +1,1 @@
-def count_letter()
+def count_letter(find, sentance)
