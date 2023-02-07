@@ -1,3 +1,3 @@
 pin = 1234
 
-while 
+while attempt != pin
