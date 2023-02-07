@@ -20,4 +20,5 @@ print(largest)
 print()
 
 for item in fish:
-    if " " in item
+    if " " in item:
+        print(item)
