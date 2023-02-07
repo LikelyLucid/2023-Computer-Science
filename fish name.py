@@ -8,4 +8,5 @@ print()
 for item in fish:
     print(item[0:3])
 
-for item in fish
+for item in fish:
+    
