@@ -25,3 +25,5 @@ for item in fish:
 # e
 
 for item in fish:
+    if "cod" in item:
+        
