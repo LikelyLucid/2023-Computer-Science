@@ -1,2 +1,5 @@
 def count_letter(find, sentance):
-    return sum(1 for _ in sentance)
+    count = 0
+    for find in sentance:
+        count += 1
+    return count
