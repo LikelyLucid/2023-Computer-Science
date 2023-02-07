@@ -7,7 +7,6 @@ print()
 # b
 for item in fish:
     print(item[0:3])
-
 print()
 # c
 largest = ""
@@ -16,7 +15,6 @@ for item in fish:
         largest = item
 print(largest)
 # d
-
 print()
 for item in fish:
     if " " in item:
