@@ -2,7 +2,6 @@ fish = ["flounder", "sole", "blue cod", "snapper", "terakihi", "john dory", "red
 # a
 for item in fish:
     print(item[0])
-
 print()
 # b
 for item in fish:
