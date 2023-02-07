@@ -5,3 +5,4 @@ def count_letter(find, sentance):
     return count
 
 sentance = input("Sentance: ")
+find = 
