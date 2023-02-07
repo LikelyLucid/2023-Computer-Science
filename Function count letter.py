@@ -1,2 +1,3 @@
 def count_letter(find, sentance):
-    count = 
+    count = 0
+    for 
