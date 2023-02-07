@@ -18,7 +18,6 @@ print(largest)
 # d
 
 print()
-
 for item in fish:
     if " " in item:
         print(item)
