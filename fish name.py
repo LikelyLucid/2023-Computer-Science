@@ -21,7 +21,7 @@ print()
 for item in fish:
     if " " in item:
         print(item)
-
+print()
 # e
 
 for item in fish:
