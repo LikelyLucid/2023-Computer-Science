@@ -6,4 +6,4 @@ for item in fish:
 print()
 
 for item in fish:
-    print(item[0:2])
+    print(item[0:3])
