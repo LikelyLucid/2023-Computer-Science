@@ -19,4 +19,5 @@ print(largest)
 
 print()
 
-for 
+for item in fish:
+    if 
