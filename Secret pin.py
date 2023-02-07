@@ -4,3 +4,4 @@ while attempt != pin:
     try:
         attempt = int(input("Enter the Pin: "))
     else:
+        print()
