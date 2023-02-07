@@ -1,6 +1,6 @@
 def count_letter(find, sentance):
     count = 0
-    for e in range(len(sentance)):
+    for i in range(len(sentance)):
         if find in sentance[e]:
         count +=1
     return count
