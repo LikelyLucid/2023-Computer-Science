@@ -5,7 +5,7 @@ for item in fish:
 print()
 # b
 for item in fish:
-    print(item[0:3])
+    print(item[:3])
 print()
 # c
 largest = ""
