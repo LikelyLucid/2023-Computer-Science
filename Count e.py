@@ -1,1 +1,1 @@
-sentance = input("")
+sentance = input("Sentance: ")
