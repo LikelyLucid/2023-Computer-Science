@@ -20,7 +20,6 @@ for item in fish:
         print(item)
 print()
 # e
-
 for item in fish:
     if "cod" in item:
         print(item)
