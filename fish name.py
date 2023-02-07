@@ -7,3 +7,5 @@ print()
 
 for item in fish:
     print(item[0:3])
+
+
