@@ -3,3 +3,5 @@ def count_letter(find, sentance):
     for find in sentance:
         count += 1
     return count
+
+sentance 
