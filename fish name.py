@@ -4,7 +4,7 @@ for item in fish:
     print(item[0])
 
 print()
-# 
+# b
 for item in fish:
     print(item[0:3])
 
