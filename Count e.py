@@ -1,3 +1,4 @@
 sentance = input("Sentance: ")
 
-for e in sentance
+for e in sentance:
+    
