@@ -4,11 +4,12 @@ for item in fish:
     print(item[0])
 
 print()
-
+#
 for item in fish:
     print(item[0:3])
 
 print()
+
 largest = ""
 for item in fish:
     if len(item) >  len(largest):
