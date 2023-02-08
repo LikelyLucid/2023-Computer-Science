@@ -33,7 +33,9 @@ def sandwich_maker():
     for garnish in Garnish_Prices:
         print(garnish)
     garnish_choice = input("Please enter your garnish choice: ")
-    print("Your sandwich will cost: $" + str(Bread_Prices[bread_choice] + Meat_Prices[meat_choice] + Garnish_Prices[garnish_choice]))
+    print(
+        f"Your sandwich will cost: ${str(Bread_Prices[bread_choice] + Meat_Prices[meat_choice] + Garnish_Prices[garnish_choice])}"
+    )
     confirm = input("Would you like to confirm your order? (Y/N) ")
     if confirm == "Y":
         print("Thank you for your order!")
