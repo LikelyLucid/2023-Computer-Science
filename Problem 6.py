@@ -4,4 +4,4 @@ largest = 0
 
 for i in range(len(numbers)):
     if numbers[i] > largest:
-        largest = numbers
+        largest = numbers[i]
