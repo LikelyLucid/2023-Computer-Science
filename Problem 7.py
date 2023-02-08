@@ -33,6 +33,10 @@ def sandwich_maker():
     for garnish in Garnish_Prices:
         print(garnish)
     garnish_choice = input("Please enter your garnish choice: ")
+    print(f"Your current order contains:
+    Bread: {bread_choice}
+    Meat: {meat_choice}
+    Garnish: {garnish_choice}")
     print(
         f"Your sandwich will cost: ${str(Bread_Prices[bread_choice] + Meat_Prices[meat_choice] + Garnish_Prices[garnish_choice])}"
     )
