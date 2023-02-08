@@ -21,18 +21,21 @@ Garnish_Prices = {
 
 def sandwich_maker():
     print("Welcome to the Sandwich Maker!")
-    print("Please select your bread:")
-    for bread in Bread_Prices:
-        print(bread)
-    bread_choice = input("Please enter your bread choice: ")
-    print("Please select your meat:")
-    for meat in Meat_Prices:
-        print(meat)
-    meat_choice = input("Please enter your meat choice: ")
-    print("Please select your garnish:")
-    for garnish in Garnish_Prices:
-        print(garnish)
-    garnish_choice = input("Please enter your garnish choice: ")
+    bread_choice = _extracted_from_sandwich_maker_3(
+        "Please select your bread:",
+        Bread_Prices,
+        "Please enter your bread choice: ",
+    )
+    meat_choice = _extracted_from_sandwich_maker_3(
+        "Please select your meat:",
+        Meat_Prices,
+        "Please enter your meat choice: ",
+    )
+    garnish_choice = _extracted_from_sandwich_maker_3(
+        "Please select your garnish:",
+        Garnish_Prices,
+        "Please enter your garnish choice: ",
+    )
     print("Your sandwich will cost: $" + str(Bread_Prices[bread_choice] + Meat_Prices[meat_choice] + Garnish_Prices[garnish_choice]))
     confirm = input("Would you like to confirm your order? (Y/N) ")
     if confirm == "Y":
@@ -40,5 +43,13 @@ def sandwich_maker():
     else:
         print("Please make your changes.")
         sandwich_maker()
+
+
+# TODO Rename this here and in `sandwich_maker`
+def _extracted_from_sandwich_maker_3(arg0, arg1, arg2):
+    print(arg0)
+    for bread in arg1:
+        print(bread)
+    return input(arg2)
 
 sandwich_maker()
