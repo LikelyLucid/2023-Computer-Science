@@ -1,2 +1,4 @@
 class Toes:
-    def _
+    def __init__(self, size):
+        self.size = size
+        self.count = 
