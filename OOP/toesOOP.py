@@ -1,2 +1,2 @@
 class Toes:
-    def __init__(self, sexyness, 
+    def __init__(self, sexyness, aroma, 
