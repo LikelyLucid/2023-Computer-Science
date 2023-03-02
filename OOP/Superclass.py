@@ -1,1 +1,1 @@
-class wo
+class worker
