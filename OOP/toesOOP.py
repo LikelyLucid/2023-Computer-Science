@@ -4,5 +4,3 @@ class Toes:
         self.aroma = aroma
         self.flavor = flavor
         self.texture = texture
-
-    def 
