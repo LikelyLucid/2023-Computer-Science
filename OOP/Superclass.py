@@ -7,3 +7,4 @@ class worker:
         self.job = job
     def __str__(self):
         return f"{self.name} {self.age} {self.id} {self.birthdate} {self.job}"
+class 
