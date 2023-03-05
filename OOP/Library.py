@@ -25,18 +25,35 @@ class User:
         self.borrowed_books = []
         user_list.append(self)
 
+    def user_details(self):
+        print("Name: ", self.name)
+        print("Address: ", self.address)
+        print("Fees: ", self.fees)
+        print("##############################################################")
+
+def add_user
 
 def print_info():
     for book in book_list:
         book.book_details()
+
+def print_users():
+    for user in user_list:
+        user.user_details()
+
 
 book_list = []
 user_list = []
 
 
 Book("Lord of the Rings", "J. R. R. Tolkien", "TOL", "082409640")
-Book("The Hunger Games", "Suzzane Collins", "COL", "095395267")
+Book("The Hunger Games", "Suzanne Collins", "COL", "095395267")
 Book("A Tale Of Two Cities", "Charles Dickens", "DIK", "60462809248")
 Book("Harry Potter And The Sorcerer's Stone", "J. K. Rowling", "ROW", "9781461245678")
 
+User("John Doe", "123 Fake Street")
+User("Jane Doe", "12 Fake Street")
+User("Spiderman", "128 Fake Street")
+
 print_info()
+print_users()
