@@ -5,13 +5,4 @@ class Book:
     self.dewey = dewey # string
     self.isbn = isbn # string
     self. available = True
-    self. borrower = None
-
-Book("of the Rings", "J.R.R.ToUien", "TOL", "97802611032S2")
-Hunger Games", "Suzanne Cottins", "COL
-, "9781407132082")
-A Tate Of Two Cities"
-"Charles Dickens"
-, "DIC", "9781853262647")
-"RON", "9780439321624")
-Potter"
+    self.borrower = None
