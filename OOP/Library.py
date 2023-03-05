@@ -6,3 +6,4 @@ class Book:
     self.isbn = isbn # string
     self. available = True
     self. borrower = None
+
