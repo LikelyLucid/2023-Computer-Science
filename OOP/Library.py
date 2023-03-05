@@ -7,8 +7,7 @@ class Book:
     self. available = True
     self. borrower = None
 
-Book("
-of the Rings",
+Book("of the Rings",
 "J.R.R.ToUien", "TOL", "97802611032S2")
 Hunger Games", "Suzanne Cottins", "COL
 , "9781407132082")
