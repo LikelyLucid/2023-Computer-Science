@@ -17,11 +17,23 @@ class Book:
         print(self.borrower)
         print("##############################################################")
 
+class User:
+    def __init__(self, name, address):
+        self.name = name
+        self.address = address
+        self.fees = 0.0
+        self.borrowed_books = []
+        user_list.append(self)
+
+
 def print_info():
     for book in book_list:
         book.book_details()
 
 book_list = []
+user_list = []
+
+
 Book("Lord of the Rings", "J. R. R. Tolkien", "TOL", "082409640")
 Book("The Hunger Games", "Suzzane Collins", "COL", "095395267")
 Book("A Tale Of Two Cities", "Charles Dickens", "DIK", "60462809248")
