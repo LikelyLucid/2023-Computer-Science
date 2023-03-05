@@ -10,6 +10,7 @@ class Book:
 
     def book_details(self):
         print(self.title())
+        print
 
 book_list = []
 Book("Lord of the Rings", "J. R. R. Tolkien", "TOL", "082409640")
