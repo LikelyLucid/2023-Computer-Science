@@ -31,7 +31,20 @@ class User:
         print("Fees: ", self.fees)
         print("##############################################################")
 
-def add_user
+def add_book():
+    book_name = input("Enter the title of the book: ").title()
+    book_author = input("Enter the author of the book: ").title()
+    book_dewey = input("Enter the Dewey number of the book: ").upper()
+    book_isbn = input("Enter the ISBN number of the book: ")
+    Book(book_name, book_author, book_dewey, book_isbn)
+    print(book_name, " has been added")
+
+def add_user():
+    name = input("Enter name: ").title()
+    address = input("Enter address: ")
+    User(name, address)
+    print(name, address, "has been added to the system")
+
 
 def print_info():
     for book in book_list:
