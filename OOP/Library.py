@@ -1,5 +1,5 @@
 class Book:
-    init(self, title, author, dewey, isbn):
+    __init(self, title, author, dewey, isbn):
     self.title = title. title() # string with capitalised first letter
     self.author = author # string
     self.dewey = dewey # string
