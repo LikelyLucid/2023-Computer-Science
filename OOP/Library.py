@@ -7,6 +7,7 @@ class Book:
         self.available = True
         self.borrower = None
         book_list.append(self)
+    def book_details()
 
 book_list = []
 Book("Lord of the Rings", "J. R. R. Tolkien", "TOL", "082409640")
