@@ -4,5 +4,5 @@ class Book:
     self.author = author # string
     self.dewey = dewey # string
     self.isbn = isbn # string
-    self. available = True
+    self.available = True
     self.borrower = None
