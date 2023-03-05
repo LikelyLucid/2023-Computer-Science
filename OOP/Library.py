@@ -13,6 +13,7 @@ class Book:
         print(self.author)
         print(self.dewey)
         print(self.isbn)
+        print
 
 
 
