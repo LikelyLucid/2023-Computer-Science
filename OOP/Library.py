@@ -11,7 +11,8 @@ class Book:
     def book_details(self):
         print(self.title())
         print(self.author)
-        print()
+        print(self.dewey)
+        
 
 
 
