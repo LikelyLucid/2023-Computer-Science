@@ -1,9 +1,9 @@
 class Book:
     def __init__(self, title, author, dewey, isbn):
-        self.title = title.title() # string with capitalised first letter
-        self.author = author # string
-        self.dewey = dewey # string
-        self.isbn = isbn # string
+        self.title = title.title()  # string with capitalised first letter
+        self.author = author  # string
+        self.dewey = dewey  # string
+        self.isbn = isbn  # string
         self.available = True
         self.borrower = None
         book_list.append(self)
@@ -16,6 +16,7 @@ class Book:
         print(self.available)
         print(self.borrower)
         print("##############################################################")
+
 
 class User:
     def __init__(self, name, address):
@@ -31,6 +32,7 @@ class User:
         print("Fees: ", self.fees)
         print("##############################################################")
 
+
 def add_book():
     book_name = input("Enter the title of the book: ").title()
     book_author = input("Enter the author of the book: ").title()
@@ -38,6 +40,7 @@ def add_book():
     book_isbn = input("Enter the ISBN number of the book: ")
     Book(book_name, book_author, book_dewey, book_isbn)
     print(book_name, " has been added")
+
 
 def add_user():
     name = input("Enter name: ").title()
@@ -55,6 +58,7 @@ def find_book():
     print("Book not found")
     # find_book()
 
+
 def find_user():
     user_to_find = input("Enter the name of the user: ").title()
     for user in user_list:
@@ -64,13 +68,16 @@ def find_user():
         print("User not found")
         return None
 
+
 def print_info():
     for book in book_list:
         book.book_details()
 
+
 def print_users():
     for user in user_list:
         user.user_details()
+
 
 def lend_book():
     user = find_user()
@@ -87,6 +94,7 @@ def lend_book():
         else:
             print("Sorry, this book is not available")
 
+
 def return_book():
     user = find_user()
     if user:
@@ -100,6 +108,7 @@ def return_book():
                 user.borrowed_books.remove(book)
         else:
             print("Sorry, this book is not available")
+
 
 book_list = []
 user_list = []
