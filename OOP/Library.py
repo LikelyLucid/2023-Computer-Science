@@ -46,6 +46,24 @@ def add_user():
     print(name, address, "has been added to the system")
 
 
+def find_book():
+    book_to_find = input("Enter the title of the book: ").title()
+    for book in book_list:
+        if book.title == book_to_find:
+            print(f"the book '{book_to_find}' is available")
+            return book
+    print("Book not found")
+    # find_book()
+
+def find_user():
+    user_to_find = input("Enter the name of the user: ").title()
+    for user in user_list:
+        if user.name == user_to_find:
+            print("Hi:", user_to_find)
+            return user
+        print("User not found")
+        return None
+
 def print_info():
     for book in book_list:
         book.book_details()
@@ -54,6 +72,34 @@ def print_users():
     for user in user_list:
         user.user_details()
 
+def lend_book():
+    user = find_user()
+    print()
+    if user:
+        book = find_book()
+        if book.available:
+            confirm = input("Are you sure you want to lend this book? (y/n)").lower()
+            if confirm == "y":
+                print(f"Book Title : {book.title} is now on loan to {user.name}")
+                book.available = False
+                book.borrower = user.name
+                user.borrowed_books.append(book)
+        else:
+            print("Sorry, this book is not available")
+
+def return_book():
+    user = find_user()
+    if user:
+        book = find_book()
+        if book.borrower == user.name:
+            confirm = input("Are you sure you want to return this book? (y/n)").lower()
+            if confirm == "y":
+                print(f"Book Title : {book.title} is now available")
+                book.borrower = None
+                book.available = True
+                user.borrowed_books.remove(book)
+        else:
+            print("Sorry, this book is not available")
 
 book_list = []
 user_list = []
