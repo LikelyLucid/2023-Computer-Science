@@ -43,3 +43,5 @@ def select_student_age():
             student.display_info()
 
 student_list = []
+generate_students()
+select_student_age()
