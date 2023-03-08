@@ -22,4 +22,7 @@ class Student:
 # Lisa,16, 022-4567123,SKWR, 13DTC,13SMX, female
 # Patrick, 18, 023-01234567, SCBE, 13ENG, 13CMX, 13SMX, 13DTC, male
 
-Student("Karen", 17, "123-4567", "WNLR", "13DTC", "13SMX", "female")
+Student("Karen", 17, "123-4567", "WNLR", ("13DTC", "13SMX"), False)
+Student("Bob", 18, "021-0263674", "BNNL", ("13SMX", "13ENG"), True)
+Student("Lisa", 16, "022-4567123", "SKWR", ("13DTC", "13CMX"), False)
+Student("Patrick", 18, "023-01234567", "SCBE", ("13ENG", "13CMX", "13DTC"), True)
