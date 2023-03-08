@@ -33,6 +33,13 @@ def print_student_details():
     for student in student_list:
         student.display_info()
 
+def find_student():
+    student_to_find = input("Enter the name of the student: ").title()
+    for student in student_list:
+        if student.name == student_to_find:
+            student.display_info()
+    print("Student not found")
+
 def select_student_age():
     age = int(input("Enter the age of the students: "))
     for student in student_list:
@@ -49,4 +56,4 @@ def count_in_class():
 
 student_list = []
 generate_students()
-count_in_class()
+find_student()
