@@ -123,5 +123,23 @@ User("John Doe", "123 Fake Street")
 User("Jane Doe", "12 Fake Street")
 User("Spiderman", "128 Fake Street")
 
-print_info()
-print_users()
+new_action = True
+while new_action:
+    print("1. Lend a book")
+    print("2. Return a book")
+    print("3. Add a user")
+    print("4. Add a book")
+    print("5. Exit")
+    action = input("What would you like to do?: ")
+    if action == "1":
+        lend_book()
+    elif action == "2":
+        return_book()
+    elif action == "3":
+        add_user()
+    elif action == "4":
+        add_book()
+    elif action == "5":
+        new_action = False
+    else:
+        print("\nInvalid choice\n")
