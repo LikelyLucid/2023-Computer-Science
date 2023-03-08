@@ -42,10 +42,13 @@ def find_student():
     print("Student not found")
 
 def select_student_age():
+    count = 0
     age = int(input("Enter the age of the students: "))
     for student in student_list:
         if student.age >= age:
             student.display_info()
+            count += 1
+    print(f"{count} students are older than {age}")
 
 def count_in_class():
     class_name = input("Enter the name of the class: ").upper()
