@@ -42,6 +42,14 @@ def select_student_age():
         if student.age >= age:
             student.display_info()
 
+def count_in_class():
+    count = 0
+    class_name = input("Enter the class: ").upper()
+    for student in student_list:
+        if student.formclass == class_name:
+            count += 1
+    print(f"{class} has {count} students")
+
 student_list = []
 generate_students()
-select_student_age()
+count_in_class()
