@@ -1,5 +1,5 @@
 class Student:
-    def __init__(self, name, age, phone_number, formclass, subjects, is_male, enrolled):
+    def __init__(self, name, age, phone_number, formclass, subjects, is_male, enrolled=True):
         self.name = name
         self.age = age
         self.phone_number = phone_number
@@ -17,6 +17,20 @@ class Student:
         print(f"Subjects: {self.subjects}")
         print(f"Is Male: {self.is_male}")
         print(f"Enrolled: {self.enrolled}")
+        print("##############################################################")
+
+def generate_students():
+    # available form classes are: "BAKER", "MORGAN", "MCNICOL", "GRAHAM", "BELL", "NIMMO", "BARKER"
+    # available classes are: "ART", "ENG", "MAT", "GRA", "DTC", "PHY", "BIO"
+    import csv
+    with open('random_students.csv', newline='') as csvfile:
+        filereader = csv.reader(csvfile, delimiter='|')
+        for line in filereader:
+            if line[5] == "True":
+                is_male = True
+            else:
+                is_male = False
+            Student(line[0], int(line[1]), line[2], line[3], line[4], is_male)
 
 def print_student_details():
     for student in student_list:
@@ -29,7 +43,3 @@ def select_student_age():
             student.display_info()
 
 student_list = []
-Student("Karen", 17, "123-4567", "WNLR", ("13DTC", "13SMX"), False)
-Student("Bob", 18, "021-0263674", "BNNL", ("13SMX", "13ENG"), True)
-Student("Lisa", 16, "022-4567123", "SKWR", ("13DTC", "13CMX"), False)
-Student("Patrick", 18, "023-01234567", "SCBE", ("13ENG", "13CMX", "13DTC"), True)
