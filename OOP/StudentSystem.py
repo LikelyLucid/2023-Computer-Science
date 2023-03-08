@@ -38,6 +38,7 @@ def find_student():
     for student in student_list:
         if student.name == student_to_find:
             student.display_info()
+            return student
     print("Student not found")
 
 def select_student_age():
