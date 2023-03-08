@@ -22,6 +22,12 @@ def print_student_details():
     for student in student_list:
         student.display_info()
 
+def select_student_age():
+    age = int(input("Enter the age of the students: "))
+    for student in student_list:
+        if student.age >= age:
+            student.display_info()
+
 student_list = []
 Student("Karen", 17, "123-4567", "WNLR", ("13DTC", "13SMX"), False)
 Student("Bob", 18, "021-0263674", "BNNL", ("13SMX", "13ENG"), True)
