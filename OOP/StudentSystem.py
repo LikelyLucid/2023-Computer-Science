@@ -1,4 +1,5 @@
 student_list = []
+available_subjects = ["ART", "ENG", "MAT", "GRA", "DTC", "PHY", "BIO"]
 class Student:
     def __init__(self, name, age, phone_number, formclass, subjects, is_male, enrolled=True):
         self.name = name
@@ -20,14 +21,18 @@ class Student:
         print(f"Enrolled: {self.enrolled}")
         print("##############################################################")
 
+def pick_subjects():
+    print("Available Subjects:")
+    for item in available_subjects:
+        print(item)
+    print("##############################################################")
+
 def add_student():
     Name = input("Enter Name: ").title()
     age = int(input("Enter Age: "))
     PhoneNumber = input("Enter Phone Number: ")
     Formclass = input("Enter Form Class: ")
-    while True:
-        subjects = input("Enter Subject\n(Enter 'q' to quit): ").title()
-        
+
 
 def generate_students():
     # available form classes are: "BAKER", "MORGAN", "MCNICOL", "GRAHAM", "BELL", "NIMMO", "BARKER"
