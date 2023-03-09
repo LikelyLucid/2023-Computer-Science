@@ -20,6 +20,8 @@ class Student:
         print(f"Enrolled: {self.enrolled}")
         print("##############################################################")
 
+def add_student(name, age, phone_number, formclass, subjects, is_male):
+    Student(name, age, phone_number, formclass, subjects, is_male)
 def generate_students():
     # available form classes are: "BAKER", "MORGAN", "MCNICOL", "GRAHAM", "BELL", "NIMMO", "BARKER"
     # available classes are: "ART", "ENG", "MAT", "GRA", "DTC", "PHY", "BIO"
