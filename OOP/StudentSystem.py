@@ -20,8 +20,15 @@ class Student:
         print(f"Enrolled: {self.enrolled}")
         print("##############################################################")
 
-def add_student(name, age, phone_number, formclass, subjects, is_male):
-    Student(name, age, phone_number, formclass, subjects, is_male)
+def add_student():
+    Name = input("Enter Name: ").title()
+    age = int(input("Enter Age: "))
+    PhoneNumber = input("Enter Phone Number: ")
+    Formclass = input("Enter Form Class: ")
+    while True:
+        subjects = input("Enter Subject\n(Enter 'q' to quit): ").title()
+        
+
 def generate_students():
     # available form classes are: "BAKER", "MORGAN", "MCNICOL", "GRAHAM", "BELL", "NIMMO", "BARKER"
     # available classes are: "ART", "ENG", "MAT", "GRA", "DTC", "PHY", "BIO"
