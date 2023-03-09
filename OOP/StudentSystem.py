@@ -1,3 +1,4 @@
+student_list = []
 class Student:
     def __init__(self, name, age, phone_number, formclass, subjects, is_male, enrolled=True):
         self.name = name
@@ -58,6 +59,28 @@ def count_in_class():
             count += 1
     print(f"{class_name} has {count} students")
 
-student_list = []
+action = True
+while action:
+    print("#### MENU ####")
+    print("(1) Count Students Taking Subject")
+    print("(2) Print Full List of students")
+    print("(3) Print Students about particular age")
+    print("(4) Get details of particular Student")
+    print("(5) Exit")
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        count_in_class()
+    elif choice == "2":
+        print_student_details()
+    elif choice == "3":
+        select_student_age()
+    elif choice == "4":
+        find_student()
+    elif choice == "5":
+        action = False
+    else:
+        print("Invalid choice")
+
+
 generate_students()
 find_student()
