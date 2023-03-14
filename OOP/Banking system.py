@@ -46,9 +46,9 @@ def findUser():
 def overdrafts():
     # TO COMPLETE
     num = 0
-    balance = 0
+    balance = int(0)
     for user in userList:
-        if float(user.balance) < 0.0:
+        if user.balance < 0:
             print(f"{user.first_name} {user.last_name}")
             num += 1
             balance += user.balance
