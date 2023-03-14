@@ -102,9 +102,9 @@ Show name of account to transfer and confirm
                     if user.account_no == trans_acc:
                         print(f"Balance of {user.first_name} {user.last_name}: {user.balance}")
                         user.balance -= trans_amt
-                        trans_user.balance += trans_amt
+                        trans_acc.balance += trans_amt
                         print(f"Balance of {user.first_name} {user.last_name}: {user.balance}")
-                        print(f"Balance of {trans_user.first_name} {trans_user.last_name}: {trans_user.balance}")
+                        print(f"Balance of {trans_acc.first_name} {trans_acc.last_name}: {trans_acc.balance}")
                         return
 
 userList = []
