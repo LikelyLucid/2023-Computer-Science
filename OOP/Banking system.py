@@ -57,10 +57,12 @@ def overdrafts():
 
 def missingEmails():
     # TO COMPLETE
+    num = 0
     for user in userList:
         if user.email == "":
             print(f"{user.first_name} {user.last_name}")
-    print(f"Total number of users with missing emails: {len(userList)}")
+            num += 1
+    print(f"Total number of users with missing emails: {num}")
 
 def bankDetails():
     # TO COMPLETE
