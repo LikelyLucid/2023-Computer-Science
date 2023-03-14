@@ -35,25 +35,32 @@ def generateUsers():
 
 def findUser():
     # TO COMPLETE
-    name = input("Enter the name of the user: ").title()
+    first_name = input("Enter the first name of the user: ").title()
+    last_name = input("Enter the last name of the user: ").title()
     for user in userList:
-        if user.name == name:
+        if user.last_name == last_name and user.first_name == first_name:
             user.displayInfo()
             return user
     print("User not found")
 
 def overdrafts():
     # TO COMPLETE
+    num = 0
+    balance = 0
     for user in userList:
         if user.balance < 0:
             print(f"{user.first_name} {user.last_name}")
-    print(f"Total number of users with overdraft accounts: {len(userList)}")
-    print(f"Total amount of overdraft by all these users: {sum(user.balance for user in userList)}")
+            num += 1
+            balance += user.balance
+    print(f"Total number of users with overdraft accounts: {num}")
+    print(f"Total amount of overdraft by all these users: {balance}")
 
 def missingEmails():
     # TO COMPLETE
-
-    True
+    for user in userList:
+        if user.email == "":
+            print(f"{user.first_name} {user.last_name}")
+    print(f"Total number of users with missing emails: {len(userList)}")
 
 def bankDetails():
     # TO COMPLETE
