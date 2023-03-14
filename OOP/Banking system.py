@@ -31,7 +31,7 @@ def generateUsers():
     with open('bankUsers.csv', newline='') as csvfile:
         filereader = csv.reader(csvfile, delimiter=',', quotechar="'")
         for line in filereader:
-            User(line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7], float(line[8][1:]), line[9])
+            User(line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7], float(line[8].strip("$")), line[9])
 
 def findUser():
     # TO COMPLETE
@@ -48,7 +48,7 @@ def overdrafts():
     num = 0
     balance = 0
     for user in userList:
-        if user.balance < 0:
+        if float(user.balance) < 0.0:
             print(f"{user.first_name} {user.last_name}")
             num += 1
             balance += user.balance
@@ -65,18 +65,18 @@ def missingEmails():
     print(f"Total number of users with missing emails: {num}")
 
 def bankDetails():
-    """It should print out:
-•
-Total number of users
-Bank total worth (total of all user's balances)
-User (with their balance) that has the highest balance
-User (with their balance) that has the lowest balance"""
     print("Total number of users: ", len(userList))
     print("Bank total worth: ", sum(user.balance for user in userList))
     max = userList[0]
     for user in userList:
         if user.balance > max.balance:
             max = user
+    print(f"User that has the highest balance: {max.first_name} {max.last_name}, Balance: {max.balance}")
+    min = userList[0]
+    for user in userList:
+        if user.balance < min.balance:
+            min = user
+    print(f"User that has the lowest balance: {min.first_name} {min.last_name}, Balance: {min.balance}")
 
 
 def transfer():
