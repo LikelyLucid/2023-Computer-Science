@@ -80,9 +80,32 @@ def bankDetails():  # sourcery skip: avoid-builtin-shadow
 
 
 def transfer():
-    # TO COMPLETE
-
-    True
+    """1. Ask for an account number
+Display the name and the balance of the account
+2.
+3. Ask for an amount to transfer and check if valid
+Ask for an account number to transfer money to
+4.
+Show name of account to transfer and confirm
+5.
+6. Transfer money - show balances of both accounts"""
+    acc_num = input("Enter an account number: ")
+    for user in userList:
+        if user.account_no == acc_num:
+            print(f"Balance of {user.first_name} {user.last_name}: {user.balance}")
+            trans_amt = int(input("Enter the amount to transfer: "))
+            if trans_amt > user.balance:
+                print("Insufficient funds")
+            else:
+                trans_acc = input("Enter the account number to transfer to: ")
+                for trans_acc in userList:
+                    if user.account_no == trans_acc:
+                        print(f"Balance of {user.first_name} {user.last_name}: {user.balance}")
+                        user.balance -= trans_amt
+                        trans_user.balance += trans_amt
+                        print(f"Balance of {user.first_name} {user.last_name}: {user.balance}")
+                        print(f"Balance of {trans_user.first_name} {trans_user.last_name}: {trans_user.balance}")
+                        return
 
 userList = []
 generateUsers()
