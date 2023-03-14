@@ -65,9 +65,19 @@ def missingEmails():
     print(f"Total number of users with missing emails: {num}")
 
 def bankDetails():
-    # TO COMPLETE
+    """It should print out:
+•
+Total number of users
+Bank total worth (total of all user's balances)
+User (with their balance) that has the highest balance
+User (with their balance) that has the lowest balance"""
+    print("Total number of users: ", len(userList))
+    print("Bank total worth: ", sum(user.balance for user in userList))
+    max = userList[0]
+    for user in userList:
+        if user.balance > max.balance:
+            max = user
 
-    True
 
 def transfer():
     # TO COMPLETE
