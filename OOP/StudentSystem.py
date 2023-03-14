@@ -67,10 +67,7 @@ def select_student_age():
 
 def count_in_class():
     class_name = input("Enter the name of the class: ").upper()
-    count = 0
-    for student in student_list:
-        if student.formclass == class_name:
-            count += 1
+    count = sum(student.formclass == class_name for student in student_list)
     print(f"{class_name} has {count} students")
 
 action = True
