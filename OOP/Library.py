@@ -96,8 +96,7 @@ def lend_book():
 
 
 def return_book():
-    user = find_user()
-    if user:
+    if user := find_user():
         book = find_book()
         if book.borrower == user.name:
             confirm = input("Are you sure you want to return this book? (y/n)").lower()
