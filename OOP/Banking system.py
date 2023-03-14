@@ -25,7 +25,6 @@ class User:
         print(f"Balance: {self.balance}")
         print(f"Account Number: {self.account_no}")
         print("##############################################################")
-        True
 
 def generateUsers():
     import csv
@@ -36,8 +35,12 @@ def generateUsers():
 
 def findUser():
     # TO COMPLETE
-
-    True
+    name = input("Enter the name of the user: ").title()
+    for user in userList:
+        if user.name == name:
+            user.displayInfo()
+            return user
+    print("User not found")
 
 def overdrafts():
     # TO COMPLETE
