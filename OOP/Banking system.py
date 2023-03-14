@@ -44,8 +44,11 @@ def findUser():
 
 def overdrafts():
     # TO COMPLETE
-
-    True
+    for user in userList:
+        if user.balance < 0:
+            print(f"{user.first_name} {user.last_name}")
+    print(f"Total number of users with overdraft accounts: {len(userList)}")
+    print(f"Total amount of overdraft by all these users: {sum(user.balance for user in userList)}")
 
 def missingEmails():
     # TO COMPLETE
