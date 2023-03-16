@@ -64,10 +64,10 @@ def missingEmails():
             num += 1
     print(f"Total number of users with missing emails: {num}")
 
-def bankDetails():  # sourcery skip: avoid-builtin-shadow
+def bankDetails():
     print("Total number of users: ", len(userList))
     print("Bank total worth: ", sum(user.balance for user in userList))
-    max = userList[0]
+    max_ = userList[0]
     for user in userList:
         if user.balance > max.balance:
             max = user
