@@ -80,15 +80,6 @@ def bankDetails():  # sourcery skip: avoid-builtin-shadow
 
 
 def transfer():
-    """1. Ask for an account number
-Display the name and the balance of the account
-2.
-3. Ask for an amount to transfer and check if valid
-Ask for an account number to transfer money to
-4.
-Show name of account to transfer and confirm
-5.
-6. Transfer money - show balances of both accounts"""
     acc_num = input("Enter an account number: ")
     for user in userList:
         if user.account_no == acc_num:
@@ -106,6 +97,8 @@ Show name of account to transfer and confirm
                         print(f"Balance of {user.first_name} {user.last_name}: {user.balance}")
                         print(f"Balance of {trans_acc.first_name} {trans_acc.last_name}: {trans_acc.balance}")
                         return
+                    else:
+                        print("Account not found")
 
 userList = []
 generateUsers()
